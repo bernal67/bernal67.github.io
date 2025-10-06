@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      /* Neutral dark palette with warm accents for higher contrast */
+      /* Neutral dark palette with warm accents for high contrast */
       --bg: #0b0e13;
       --bg-soft: #11151b;
       --card: #141922;
@@ -19,7 +19,8 @@
       --fg: #f3f4f6;
       --brand: #f59e0b;   /* amber-500 */
       --brand-2: #22c55e; /* green-500 */
-      --link: #fbbf24;    /* amber-400 (high contrast on dark) */
+      --link: #ffd166;    /* bright amber for links */
+      --link-text: #0b0e13; /* text color on solid link pills */
       --ring: rgba(245, 158, 11, .35);
       --chip: #1f2937;
     }
@@ -33,16 +34,19 @@
         --brand: #d97706;  /* amber-600 */
         --brand-2: #16a34a;/* green-600 */
         --link: #b45309;   /* amber-700 */
-        --chip: #fffbeb;   /* warm chip bg */
+        --link-text: #ffffff;
+        --chip: #fff7ed;   /* warm chip bg */
         --ring: rgba(217,119,6,.25);
       }
       .shadow{ box-shadow: 0 10px 24px rgba(2,8,23,.06), 0 2px 6px rgba(2,8,23,.04); }
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--bg) 0%, var(--bg-soft) 100%);} 
+
     /* Global links: brighter color + underline for visibility */
-    a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
-    a:hover{filter:brightness(1.1)}
+    a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+    a:hover{filter:brightness(1.12)}
+
     .container{max-width:1100px;margin:0 auto;padding:24px}
 
     header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:linear-gradient(180deg, rgba(2,6,23,.8), rgba(2,6,23,.25));border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
@@ -50,47 +54,10 @@
     nav .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.2px;color:var(--fg)}
     .dot{width:10px;height:10px;border-radius:999px;background:conic-gradient(from 0deg,var(--brand),var(--brand-2));box-shadow:0 0 0 6px var(--ring)}
     .nav-links a{padding:10px 12px;border-radius:10px;color:var(--fg);text-decoration:none}
-    .nav-links a:hover{background:rgba(255,255,255,.06);text-decoration:underline}
+    .nav-links a:hover{background:rgba(255,255,255,.08);text-decoration:underline}
 
     /* Hero */
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
-    .hero h1{font-size:clamp(32px,5vw,48px);line-height:1.1;margin:0 0 12px}
-    .hero p.lead{font-size:clamp(16px,2.2vw,18px);color:var(--muted);margin:0 0 20px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg, rgba(245,158,11,.14), rgba(34,197,94,.10));color:var(--fg);text-decoration:none}
-    .btn:hover{box-shadow:0 10px 24px rgba(245,158,11,.18)}
-    .btn.secondary{background:transparent;color:var(--fg)}
-
-    .hero-card{background:radial-gradient(1200px 600px at 100% -20%,rgba(245,158,11,.15),transparent),linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:12px}
-    .hero-card img{width:100%;height:auto;border-radius:14px;display:block}
-
-    /* Sections */
-    section{padding:28px 0}
-    h2{font-size:clamp(22px,3vw,28px);margin:0 0 16px}
-    .muted{color:var(--muted)}
-
-    /* Projects */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:18px;overflow:hidden}
-    .card img{width:100%;height:180px;object-fit:cover;display:block}
-    .card .body{padding:14px}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .chip{background:var(--chip);color:var(--muted);padding:4px 10px;border-radius:999px;font-size:12px}
-    .card .meta{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
-    .card .meta a{font-weight:600;color:var(--link)}
-    .card .meta a:hover{text-decoration:underline}
-
-    /* About / Skills */
-    .skills{display:flex;gap:10px;flex-wrap:wrap}
-    .skills .chip{background:linear-gradient(180deg,rgba(245,158,11,.18),rgba(245,158,11,.08));color:#fff3c4;border:1px solid rgba(245,158,11,.35)}
-
-    /* Footer */
-    footer{padding:36px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06);margin-top:12px}
-
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr;}
-      .grid{grid-template-columns:1fr}
-    }
-  </style>
+    .hero{display:grid;grid-template-columns:1.2fr
 </head>
 <body>
   <header>
@@ -115,7 +82,7 @@
           <p class="lead">SQL • Python • ETL • Snowflake • dbt • Power BI • AWS. Focused on reliability, documentation, and business impact.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <a class="btn" href="#projects">See Projects</a>
-            <a class="btn secondary" href="mailto:youremail@example.com">youremail@example.com</a>
+            <a class="btn secondary" href="mailto:Bernal67@gmail.com">Bernal67@gmail.com</a>
           </div>
         </div>
         <div class="hero-card shadow">
@@ -195,7 +162,7 @@
         <h2>Contact</h2>
         <p class="muted">Want to collaborate or hire me? Reach out via email:</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn secondary" href="mailto:youremail@example.com">youremail@example.com</a>
+          <a class="btn secondary" href="mailto:bernal67@gmail.com">Bernal67@gmail.com</a>
         </div>
       </section>
     </div>
