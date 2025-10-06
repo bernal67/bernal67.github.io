@@ -1,6 +1,5 @@
-# Steven Bernal
 
-<img src="steven.jpg" width="104" height="142">
+<img src="steven.jpg" width="200" height="200">
 
 # Hi, I'm Steven 👋
 
