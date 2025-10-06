@@ -3,40 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Steven — Data / Analytics Engineer</title>
-  <meta name="description" content="Data / Analytics Engineer portfolio: SQL, Python, ETL, AWS, Snowflake, Power BI, dbt." />
+  <title>bernal67 — Data / Analytics Portfolio</title>
+  <meta name="description" content="Portfolio for bernal67: SQL, Python, ETL, Snowflake, dbt, Power BI." />
   <meta name="theme-color" content="#0ea5e9" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg: #0b1220; /* deep navy */
-      --bg-soft: #0f172a;
-      --card: #111827;
-      --muted: #9ca3af;
-      --fg: #e5e7eb;
-      --brand: #0ea5e9; /* sky-500 */
-      --brand-2: #22d3ee; /* cyan-400 */
-      --ring: rgba(14,165,233,.35);
-      --chip: #1f2937;
-      --ok: #22c55e;
-      --warn: #f59e0b;
-    }
-    @media (prefers-color-scheme: light) {
-      :root{
-        --bg: #f8fafc;
-        --bg-soft: #eef2ff;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --fg: #0f172a;
-        --brand: #0284c7;
-        --brand-2: #06b6d4;
-        --chip: #eff6ff;
-        --ring: rgba(2,132,199,.25);
-      }
-      .shadow{ box-shadow: 0 10px 24px rgba(2,8,23,.06), 0 2px 6px rgba(2,8,23,.04); }
-    }
+    :root{ --bg:#0b1220; --bg-soft:#0f172a; --card:#111827; --muted:#9ca3af; --fg:#e5e7eb; --brand:#0ea5e9; --brand-2:#22d3ee; --chip:#1f2937; --ring:rgba(14,165,233,.35);}  
+    @media (prefers-color-scheme: light){ :root{ --bg:#f8fafc; --bg-soft:#eef2ff; --card:#ffffff; --muted:#6b7280; --fg:#0f172a; --brand:#0284c7; --brand-2:#06b6d4; --chip:#eff6ff; --ring:rgba(2,132,199,.25);} .shadow{ box-shadow:0 10px 24px rgba(2,8,23,.06),0 2px 6px rgba(2,8,23,.04);} }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--bg) 0%, var(--bg-soft) 100%);} 
     a{color:inherit;text-decoration:none}
@@ -48,7 +23,6 @@
     .nav-links a{padding:10px 12px;border-radius:10px;color:var(--muted)}
     .nav-links a:hover{color:var(--fg);background:rgba(255,255,255,.06)}
 
-    /* Hero */
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
     .hero h1{font-size:clamp(32px,5vw,48px);line-height:1.1;margin:0 0 12px}
     .hero p.lead{font-size:clamp(16px,2.2vw,18px);color:var(--muted);margin:0 0 20px}
@@ -59,12 +33,10 @@
     .hero-card{background:radial-gradient(1200px 600px at 100% -20%,rgba(34,211,238,.15),transparent),linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:12px}
     .hero-card img{width:100%;height:auto;border-radius:14px;display:block}
 
-    /* Sections */
     section{padding:28px 0}
     h2{font-size:clamp(22px,3vw,28px);margin:0 0 16px}
     .muted{color:var(--muted)}
 
-    /* Projects */
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:18px;overflow:hidden}
     .card img{width:100%;height:180px;object-fit:cover;display:block}
@@ -75,24 +47,19 @@
     .card .meta a{font-weight:600;color:#a5f3fc}
     .card .meta a:hover{text-decoration:underline}
 
-    /* About / Skills */
     .skills{display:flex;gap:10px;flex-wrap:wrap}
     .skills .chip{background:linear-gradient(180deg,rgba(2,132,199,.18),rgba(2,132,199,.08));color:#c2e9fb;border:1px solid rgba(2,132,199,.3)}
 
-    /* Footer */
     footer{padding:36px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06);margin-top:12px}
 
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr;}
-      .grid{grid-template-columns:1fr}
-    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr;} .grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <div class="brand"><span class="dot"></span> Steven • Data/Analytics Engineer</div>
+        <div class="brand"><span class="dot"></span> bernal67 • Data/Analytics Portfolio</div>
         <div class="nav-links">
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
@@ -108,11 +75,10 @@
       <section class="hero">
         <div>
           <h1>Building clean data pipelines & decision‑ready analytics.</h1>
-          <p class="lead">SQL • Python • ETL • Snowflake • dbt • AWS • Power BI. Focused on reliability, documentation, and business impact.</p>
+          <p class="lead">SQL • Python • ETL • Snowflake • dbt • Power BI • AWS. Focused on reliability, documentation, and business impact.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <a class="btn" href="#projects">See Projects</a>
-            <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn secondary" href="mailto:youremail@example.com">Email</a>
+            <a class="btn secondary" href="mailto:youremail@example.com">youremail@example.com</a>
           </div>
         </div>
         <div class="hero-card shadow">
@@ -124,46 +90,46 @@
         <h2>Featured projects</h2>
         <p class="muted">Three quick, end‑to‑end builds that demonstrate ingestion, transformation, modeling, and reporting.</p>
         <div class="grid">
-          <!-- Project 1 -->
+          <!-- Project 1: Customer_Order_ETL -->
           <article class="card">
-            <a href="https://github.com/bernal67/customer-orders-etl" target="_blank" rel="noreferrer">
-              <img alt="Customer Orders ETL" src="https://raw.githubusercontent.com/bernal67/customer-orders-etl/main/docs/screenshots/hero.png" />
+            <a href="https://github.com/bernal67/Customer_Order_ETL" target="_blank" rel="noreferrer">
+              <img alt="Customer Orders ETL" src="https://raw.githubusercontent.com/bernal67/Customer_Order_ETL/main/docs/screenshots/hero.png" />
             </a>
             <div class="body">
-              <h3 style="margin:0 0 6px">Customer Orders ETL</h3>
+              <h3 style="margin:0 0 6px">Customer Order ETL</h3>
               <p class="muted" style="margin:0 0 10px">S3 → Python (pandas) → SQL with data quality checks and KPI queries (LTV, repeat rate).</p>
               <div class="chips">
                 <span class="chip">Python</span><span class="chip">pandas</span><span class="chip">S3</span><span class="chip">SQL</span>
               </div>
               <div class="meta">
-                <a href="https://github.com/bernal67/customer-orders-etl" target="_blank" rel="noreferrer">View repo</a>
-                <a href="https://raw.githubusercontent.com/bernal67/customer-orders-etl/main/docs/screenshots/kpis.png" target="_blank" rel="noreferrer">Screenshot</a>
+                <a href="https://github.com/bernal67/Customer_Order_ETL" target="_blank" rel="noreferrer">View repo</a>
+                <a href="https://raw.githubusercontent.com/bernal67/Customer_Order_ETL/main/docs/screenshots/kpis.png" target="_blank" rel="noreferrer">Screenshot</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2 -->
+          <!-- Project 2: Snowflake_DBT -->
           <article class="card">
-            <a href="https://github.com/bernal67/snowflake-dbt-marketing" target="_blank" rel="noreferrer">
-              <img alt="Snowflake dbt Marketing" src="https://raw.githubusercontent.com/bernal67/snowflake-dbt-marketing/main/docs/screenshots/hero.png" />
+            <a href="https://github.com/bernal67/Snowflake_DBT" target="_blank" rel="noreferrer">
+              <img alt="Snowflake dbt Marketing" src="https://raw.githubusercontent.com/bernal67/Snowflake_DBT/main/docs/screenshots/hero.png" />
             </a>
             <div class="body">
-              <h3 style="margin:0 0 6px">Snowflake + dbt Marketing</h3>
+              <h3 style="margin:0 0 6px">Snowflake + dbt</h3>
               <p class="muted" style="margin:0 0 10px">Seeds, staging, marts, KPIs (ROI, CPC, CPA), lineage, and docs — modern data stack demo.</p>
               <div class="chips">
                 <span class="chip">Snowflake</span><span class="chip">dbt</span><span class="chip">SQL</span>
               </div>
               <div class="meta">
-                <a href="https://github.com/bernal67/snowflake-dbt-marketing" target="_blank" rel="noreferrer">View repo</a>
-                <a href="https://raw.githubusercontent.com/bernal67/snowflake-dbt-marketing/main/docs/screenshots/lineage.png" target="_blank" rel="noreferrer">Lineage</a>
+                <a href="https://github.com/bernal67/Snowflake_DBT" target="_blank" rel="noreferrer">View repo</a>
+                <a href="https://raw.githubusercontent.com/bernal67/Snowflake_DBT/main/docs/screenshots/lineage.png" target="_blank" rel="noreferrer">Lineage</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 3 -->
+          <!-- Project 3: Power_BI_Sales_Dashboard -->
           <article class="card">
-            <a href="https://github.com/bernal67/power-bi-sales-dashboard" target="_blank" rel="noreferrer">
-              <img alt="Power BI Sales Dashboard" src="https://raw.githubusercontent.com/bernal67/power-bi-sales-dashboard/main/docs/screenshots/store-performance.png" />
+            <a href="https://github.com/bernal67/Power_BI_Sales_Dashboard" target="_blank" rel="noreferrer">
+              <img alt="Power BI Sales Dashboard" src="https://raw.githubusercontent.com/bernal67/Power_BI_Sales_Dashboard/main/docs/screenshots/store-performance.png" />
             </a>
             <div class="body">
               <h3 style="margin:0 0 6px">Power BI Sales Dashboard</h3>
@@ -172,8 +138,8 @@
                 <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span>
               </div>
               <div class="meta">
-                <a href="https://github.com/bernal67/power-bi-sales-dashboard" target="_blank" rel="noreferrer">View repo</a>
-                <a href="https://raw.githubusercontent.com/bernal67/power-bi-sales-dashboard/main/docs/screenshots/product-analysis.png" target="_blank" rel="noreferrer">Screenshot</a>
+                <a href="https://github.com/bernal67/Power_BI_Sales_Dashboard" target="_blank" rel="noreferrer">View repo</a>
+                <a href="https://raw.githubusercontent.com/bernal67/Power_BI_Sales_Dashboard/main/docs/screenshots/product-analysis.png" target="_blank" rel="noreferrer">Screenshot</a>
               </div>
             </div>
           </article>
@@ -190,9 +156,8 @@
 
       <section id="contact">
         <h2>Contact</h2>
-        <p class="muted">Want to collaborate or hire me? Reach out via LinkedIn or email.</p>
+        <p class="muted">Want to collaborate or hire me? Reach out via email:</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
           <a class="btn secondary" href="mailto:youremail@example.com">youremail@example.com</a>
         </div>
       </section>
@@ -200,7 +165,7 @@
   </main>
 
   <footer>
-    <div class="container">© <span id="y"></span> Steven • Built with HTML/CSS. Deployed on GitHub Pages.</div>
+    <div class="container">© <span id="y"></span> bernal67 • Built with HTML/CSS. Deployed on GitHub Pages.</div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
